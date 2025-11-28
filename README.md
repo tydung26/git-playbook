@@ -133,4 +133,4 @@ git push --force-with-lease origin FEAT-123
 
 ---
 
-**Remember:** These guidelines exist to improve code quality, speed up reviews, and make collaboration easier. When in doubt, ask your team!
+**Remember:** These guidelines exist to improve code quality ✨, speed up reviews ⚡, and make collaboration easier 🤝. When in doubt, ask your team! 💬
