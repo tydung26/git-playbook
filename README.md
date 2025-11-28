@@ -23,7 +23,7 @@ Complete guide to the development workflow from picking a task to merging code.
 
 ### [Merge Request Best Practices](merge-request.md)
 
-9 golden rules for creating effective, reviewable merge requests.
+9 rules for creating effective, reviewable merge requests.
 
 **What's inside:**
 
@@ -75,7 +75,7 @@ Simple explanation of git rebase, when to use it, and how to handle conflicts.
 
 ---
 
-## <� Key Principles
+## Key Principles
 
 - **Keep it small** - Smaller MRs are reviewed faster and better
 - **Be clear** - Good commit messages and MR descriptions save time

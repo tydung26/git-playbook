@@ -39,6 +39,7 @@ git push --force-with-lease origin FEAT-123
 ## What Happens During Rebase?
 
 **Before rebase:**
+
 ```
 master:       A---B---C
                    \
@@ -46,6 +47,7 @@ your-branch:        D---E
 ```
 
 **After rebase:**
+
 ```
 master:       A---B---C
                        \
@@ -90,12 +92,12 @@ git rebase --abort
 
 ## Rebase vs Merge
 
-| Aspect | Rebase | Merge |
-|--------|--------|-------|
-| History | Linear, clean | Shows all branches |
-| Commits | Rewrites history | Preserves history |
-| Conflicts | Resolve per commit | Resolve once |
-| Use case | Feature branches | Integrating branches |
+| Aspect    | Rebase             | Merge                |
+| --------- | ------------------ | -------------------- |
+| History   | Linear, clean      | Shows all branches   |
+| Commits   | Rewrites history   | Preserves history    |
+| Conflicts | Resolve per commit | Resolve once         |
+| Use case  | Feature branches   | Integrating branches |
 
 ---
 
@@ -129,12 +131,14 @@ git push -f origin your-branch
 ## When to Rebase
 
 ### ✅ Do Rebase
+
 - Before creating a merge request
 - When master has moved ahead of your branch
 - To clean up your commit history
 - Before requesting final review
 
 ### ❌ Don't Rebase
+
 - Public/shared branches (master, main, develop)
 - Branches others are working on
 - After merge request is approved and ready to merge
