@@ -10,7 +10,7 @@ Follow the [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/
 
 | Type         | Description             | Example                         |
 | ------------ | ----------------------- | ------------------------------- |
-| **feature**  | New feature             | `feature: add user login`       |
+| **feat**     | New feat                | `feat: add user login`          |
 | **fix**      | Bug fix                 | `fix: resolve validation error` |
 | **refactor** | Code refactoring        | `refactor: simplify auth logic` |
 | **style**    | Code style/formatting   | `style: format with prettier`   |
@@ -27,7 +27,7 @@ Follow the [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/
 3. **Be concise** - Description should be short and clear
 4. **Use imperative mood** - "add" not "added", "fix" not "fixed"
 5. **No period at end** - Don't end description with a period
-6. **Scope is optional** - Add scope in parentheses if needed: `feature(auth): add login`
+6. **Scope is optional** - Add scope in parentheses if needed: `feat(auth): add login`
 
 ---
 
@@ -36,7 +36,7 @@ Follow the [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/
 ### Good Commits
 
 ```
-feature: add password reset functionality
+feat: add password reset functionality
 fix: resolve login validation bug
 refactor: simplify database connection logic
 style: apply prettier formatting
@@ -48,7 +48,7 @@ docs: add API usage examples
 ### With Scope
 
 ```
-feature(auth): add two-factor authentication
+feat(auth): add two-factor authentication
 fix(api): handle null response error
 refactor(db): optimize query performance
 ```
@@ -68,7 +68,7 @@ single processing.
 Use `!` after type to indicate breaking changes:
 
 ```
-feature!: remove deprecated API endpoints
+feat!: remove deprecated API endpoints
 
 BREAKING CHANGE: The /v1/users endpoint has been removed.
 Use /v2/users instead.
@@ -78,9 +78,9 @@ Use /v2/users instead.
 
 ## Bad Examples
 
-L `Added new feature` - Missing type, wrong tense
-L `FEATURE: Add login` - Type should be lowercase
-L `feature: Added login.` - Wrong tense, has period
+L `Added new feat` - Missing type, wrong tense
+L `feat: Add login` - Type should be lowercase
+L `feat: Added login.` - Wrong tense, has period
 L `updated stuff` - Missing type, vague description
 L `WIP` - Not descriptive
 L `fix typo` - Missing type
@@ -91,6 +91,6 @@ L `fix typo` - Missing type
 
 **Format**: `type(scope): description`
 
-**Types**: feature | fix | refactor | style | ci | chore | docs
+**Types**: feat | fix | refactor | style | ci | chore | docs
 
 **Style**: lowercase, imperative, no period
