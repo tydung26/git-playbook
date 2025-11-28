@@ -1,6 +1,7 @@
 # Git Workflow
 
 ## Overview
+
 This document outlines the standard Git Flow process for development, from picking a task to merging code.
 
 ---
@@ -16,12 +17,14 @@ This document outlines the standard Git Flow process for development, from picki
 ## 2. Create Feature Branch
 
 ### Branch Naming Convention
+
 - Create a new branch from the **master**/**main** branch
 - Branch name **must** match the task ID: `FEAT-123`
 - For multiple branches per task, use a postfix: `FEAT-123-2`
 - Use consistent naming across all related repositories
 
 ### Example
+
 ```bash
 git checkout master
 git pull origin master
@@ -33,21 +36,26 @@ git checkout -b FEAT-123
 ## 3. Development Phase
 
 ### Making Changes
+
 - Implement your solution with quality and attention to edge cases
 
 **IMPORTANT**:
+
 - If you encounter issues, communicate early:
 - Raise concerns during daily standup
 - Contact team members directly for urgent matters
 - Do not wait until the last minute to say you will miss a deadline — please communicate proactively and as early as
-possible
+  possible
 
 ### Daily Commit Requirements
+
 - Keep each commit **focused on a single logical change**
 - Write **clear, descriptive commit messages**
 
 ### Documentation & Logging
+
 **IMPORTANT**:
+
 - **Post important notes** in task comments during development:
 - Links to demos or test environments
 - Technical decisions or discoveries
@@ -59,21 +67,28 @@ possible
 ## 4. Prepare for Merge
 
 ### Pre-Merge Checklist
+
 1. **Rebase** your branch to the latest master
+
 ```bash
 git checkout master
 git pull origin master
 git checkout FEAT-123
 git rebase master
 ```
+
 2. **Test thoroughly** - you are responsible for code quality and functionality
+
 - Test all edge cases
 - Verify no regressions
 - Ensure all scenarios work correctly
+
 3. **Push** your branch to the remote repository
+
 ```bash
 git push origin FEAT-123
 ```
+
 4. **Verify pipeline** - ensure CI/CD pipeline completes successfully
 
 ---
@@ -81,12 +96,15 @@ git push origin FEAT-123
 ## 5. Create Merge Request
 
 ### MR Configuration
+
 1. Create a Merge Request for your changes
 2. **Title**: Use your commit message as the MR title
 3. **Enable**: Check the "Squash commits" option
 4. **Assign**:
+
 - Assignee: Reporter or person you discussed the task with
 - Reviewer: Select appropriate team member
+
 5. **Update Task**: Switch task state to **Code Review**
 
 ---
@@ -94,12 +112,14 @@ git push origin FEAT-123
 ## 6. Code Review Process
 
 ### Reviewer Responsibilities
+
 - Test the functionality thoroughly
 - Review the code for quality, security, and best practices
 - Leave comments for any issues or improvements needed
 - Click **Approve** when everything is correct
 
 ### Merge Conditions
+
 - All comments and threads are resolved
 - Pipeline is green
 - Code is approved
@@ -110,7 +130,9 @@ git push origin FEAT-123
 ## 7. Handling Review Feedback
 
 ### If Comments Are Received
+
 **IMPORTANT - Action required**:
+
 1. Task state returns to **In Progress**
 2. Address all reviewer comments **as soon as possible**
 3. Fix issues in your branch
@@ -119,6 +141,7 @@ git push origin FEAT-123
 6. Notify reviewer
 
 ### Resolution
+
 - Reviewer verifies fixes
 - Reviewer marks comments as **Resolved**
 - Process returns to step 6 for final approval
@@ -127,33 +150,36 @@ git push origin FEAT-123
 
 ## Quick Reference
 
-| Step | Task State | Git Action | Key Points |
-|------|------------|------------|------------|
-| 1 | In Progress | - | Assign task to yourself |
-| 2 | In Progress | Create branch | Name: `TASK-ID` or `TASK-ID-n` |
-| 3 | In Progress | Daily commits | Clear messages, document in tracker |
-| 4 | In Progress | Rebase & push | Test thoroughly, green pipeline |
-| 5 | Code Review | Create MR | Squash commits, assign reviewer |
-| 6 | Code Review | - | Reviewer tests & approves |
-| 7a | Done | Merge | All checks passed |
-| 7b | In Progress | Fix issues | Address feedback, return to step 6 |
+| Step | Task State  | Git Action    | Key Points                          |
+| ---- | ----------- | ------------- | ----------------------------------- |
+| 1    | In Progress | -             | Assign task to yourself             |
+| 2    | In Progress | Create branch | Name: `TASK-ID` or `TASK-ID-n`      |
+| 3    | In Progress | Daily commits | Clear messages, document in tracker |
+| 4    | In Progress | Rebase & push | Test thoroughly, green pipeline     |
+| 5    | Code Review | Create MR     | Squash commits, assign reviewer     |
+| 6    | Code Review | -             | Reviewer tests & approves           |
+| 7a   | Done        | Merge         | All checks passed                   |
+| 7b   | In Progress | Fix issues    | Address feedback, return to step 6  |
 
 ---
 
 ## Best Practices
 
 ### Commit Messages
+
 - Use imperative mood: "Add feature" not "Added feature"
 - Be specific: "Fix login validation bug" not "Fix bug"
 - Reference task: "FEAT-001: Add user authentication"
 
 ### Code Quality
+
 - Write clean, readable code
 - Follow team coding standards
 - Add tests for new functionality
 - Remove debugging code before committing
 
 ### Communication
+
 - Keep task tracker updated with progress
 - Document decisions and blockers
 - Respond promptly to review comments

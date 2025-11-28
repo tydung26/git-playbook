@@ -8,15 +8,15 @@ Follow the [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/
 
 ## Allowed Types
 
-| Type | Description | Example |
-|------|-------------|---------|
-| **feature** | New feature | `feature: add user login` |
-| **fix** | Bug fix | `fix: resolve validation error` |
-| **refactor** | Code refactoring | `refactor: simplify auth logic` |
-| **style** | Code style/formatting | `style: format with prettier` |
-| **ci** | CI/CD changes | `ci: update pipeline config` |
-| **chore** | Small maintenance tasks | `chore: update dependencies` |
-| **docs** | Documentation | `docs: update API guide` |
+| Type         | Description             | Example                         |
+| ------------ | ----------------------- | ------------------------------- |
+| **feature**  | New feature             | `feature: add user login`       |
+| **fix**      | Bug fix                 | `fix: resolve validation error` |
+| **refactor** | Code refactoring        | `refactor: simplify auth logic` |
+| **style**    | Code style/formatting   | `style: format with prettier`   |
+| **ci**       | CI/CD changes           | `ci: update pipeline config`    |
+| **chore**    | Small maintenance tasks | `chore: update dependencies`    |
+| **docs**     | Documentation           | `docs: update API guide`        |
 
 ---
 
@@ -34,6 +34,7 @@ Follow the [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/
 ## Examples
 
 ### Good Commits
+
 ```
 feature: add password reset functionality
 fix: resolve login validation bug
@@ -45,6 +46,7 @@ docs: add API usage examples
 ```
 
 ### With Scope
+
 ```
 feature(auth): add two-factor authentication
 fix(api): handle null response error
@@ -52,6 +54,7 @@ refactor(db): optimize query performance
 ```
 
 ### With Body
+
 ```
 fix: prevent racing conditions in task processor
 
@@ -61,7 +64,9 @@ single processing.
 ```
 
 ### Breaking Changes
+
 Use `!` after type to indicate breaking changes:
+
 ```
 feature!: remove deprecated API endpoints
 
