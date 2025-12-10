@@ -10,10 +10,10 @@ allowed_types="build|chore|ci|docs|feat|fix|perf|refactor|revert|style|test"
 
 # Check if branch name starts with an allowed type followed by /
 # Also allow main, master, develop, and prod branches
-if ! echo "$branch_name" | grep -qE "^($allowed_types)/|^(main|master|develop|prod)$"; then
+if ! echo "$branch_name" | grep -qE "^($allowed_types)[/-]|^(main|master|develop|prod)$"; then
   echo "❌ Invalid branch name: '$branch_name'"
   echo "💡 Branch name must start with one of: build, chore, ci, docs, feat, fix, perf, refactor, revert, style, test"
-  echo "💡 Format: type/description (e.g., feat/add-new-feature)"
+  echo "💡 Format: type/description or type-ticketId (e.g., feat/add-new-feature or feat-123)"
   exit 1
 fi
 
