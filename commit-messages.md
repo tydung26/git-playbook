@@ -8,15 +8,19 @@ Follow the [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/
 
 ## Allowed Types
 
-| Type         | Description             | Example                         |
-| ------------ | ----------------------- | ------------------------------- |
-| **feat**     | New feat                | `feat: add user login`          |
-| **fix**      | Bug fix                 | `fix: resolve validation error` |
-| **refactor** | Code refactoring        | `refactor: simplify auth logic` |
-| **style**    | Code style/formatting   | `style: format with prettier`   |
-| **ci**       | CI/CD changes           | `ci: update pipeline config`    |
-| **chore**    | Small maintenance tasks | `chore: update dependencies`    |
-| **docs**     | Documentation           | `docs: update API guide`        |
+| Type         | Description                      | Example                           |
+| ------------ | -------------------------------- | --------------------------------- |
+| **build**    | Build system/dependencies        | `build: update webpack config`    |
+| **chore**    | Small maintenance tasks          | `chore: update dependencies`      |
+| **ci**       | CI/CD changes                    | `ci: update pipeline config`      |
+| **docs**     | Documentation                    | `docs: update API guide`          |
+| **feat**     | New feature                      | `feat: add user login`            |
+| **fix**      | Bug fix                          | `fix: resolve validation error`   |
+| **perf**     | Performance improvements         | `perf: optimize database queries` |
+| **refactor** | Code refactoring                 | `refactor: simplify auth logic`   |
+| **revert**   | Revert previous commit           | `revert: undo feature X`          |
+| **style**    | Code style/formatting            | `style: format with prettier`     |
+| **test**     | Adding/updating tests            | `test: add unit tests for auth`   |
 
 ---
 
@@ -91,6 +95,6 @@ L `fix typo` - Missing type
 
 **Format**: `type(scope): description`
 
-**Types**: feat | fix | refactor | style | ci | chore | docs
+**Types**: build | chore | ci | docs | feat | fix | perf | refactor | revert | style | test
 
 **Style**: lowercase, imperative, no period

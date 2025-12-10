@@ -1,0 +1,14 @@
+echo "\n------------"
+echo "🐳 Validating commit message...\n"
+
+pnpm dlx commitlint --edit $1
+
+if [ $? -ne 0 ]; then
+  echo "❌ Commit message validation failed."
+  echo "💡 Use conventional commit format: type(scope): description"
+  echo "💡 Types: build, chore, ci, docs, feat, fix, perf, refactor, revert, style, test"
+  exit 1
+fi
+
+echo "🎉 Commit message is valid."
+exit 0

@@ -1,0 +1,19 @@
+upstream=$(git rev-parse --abbrev-ref @{u} 2>/dev/null || echo "")
+
+if [ -z "$upstream" ]; then
+  .husky/branch-name.sh
+fi
+
+# echo "------------"
+# echo "🐳 Running linter..."
+# echo ""
+
+# pnpm lint
+
+# if [ $? -ne 0 ]; then
+#   echo "❌ Linting failed. Please fix linting errors before pushing."
+#   exit 1
+# fi
+
+# echo "🎉 Linting passed. Proceeding with push."
+exit 0
